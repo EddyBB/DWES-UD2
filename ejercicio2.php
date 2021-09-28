@@ -15,7 +15,7 @@
         $diagonalMenor = 6;
 
         $triangulo = ($base*$altura)/2;
-        $cuadrado = ($base*$altura);
+        $cuadrado = ($base*$base);
         $rombo = ($diagonalMayor*$diagonalMenor)/2;
         define("PI",3.1415);
         $circulo = PI * $radio * $radio;
