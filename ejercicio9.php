@@ -9,7 +9,39 @@
 <body>
     <?php
         print "<p>\$_SERVER[PHP_SELF]: $_SERVER[PHP_SELF]</p>\n";
-        //https://www.mclibre.org/consultar/php/lecciones/php-variables-predefinidas.html
+        print "$_SERVER[SERVER_NAME]";
+        echo"<br>";
+        print "$_SERVER[DOCUMENT_ROOT]";
+        echo"<br>";
+        print "$_SERVER[REMOTE_ADDR]";
+        echo"<br>";
+        print "$_SERVER[REQUEST_METHOD]";
+        echo"<br>";
+
+        $c = "global";
+        function prueba(){
+
+            $a = "local";
+            static $b = 1;
+            global $c;
+
+            echo $a;
+            echo"<br>";
+            echo $b;
+            echo"<br>";
+            echo $c;
+            echo"<br>";
+
+
+        }
+
+        prueba();
+
+        echo $a;
+        echo"<br>";
+        echo $b;
+        echo"<br>";
+        echo $c;
     ?>
 </body>
 </html>
